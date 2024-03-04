@@ -10,6 +10,7 @@ const SkillDetail = ({ skill }) => {
         direction="column"
         pt="2rem"
         align="center"
+        height="100vh"
         >
       <img style={{width: "25%", paddingBottom: "2rem"}} src={skill.imageSource} alt="Immagine del div cliccato" />
 <hr style={{width: "100%"}}/>
