@@ -49,13 +49,7 @@ code {
   transform: scale(1.1); 
 }
 
-.light-mode {
-  background-color: #efefef;
-  color: #a203ff;
-  border-color: #a203ff;
-}
-
-.light-mode {
+.light-mode{
   background-color: #121212;
   color: white;
 }

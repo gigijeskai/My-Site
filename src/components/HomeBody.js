@@ -18,9 +18,11 @@ const HomeBody = () => {
       width="100%"
       size="fullwidth"
       height={["none","100vh"]}
-      pt={["4rem" , "8rem" , "12rem"]}
+      pt={["3rem" , "4rem" , "6rem"]}
+      pb={["3rem" , "4rem" , "6rem"]}
       >
         <Stack
+              className={themeClass}
         justify={"center"}
         align="center" 
         direction={['column', 'column', 'row']}

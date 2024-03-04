@@ -3,15 +3,14 @@ import Layout from "../components/Layout";
 import {Container} from "../components/styled";
 import HomeBody from "../components/HomeBody";
 
-
-
 const HomePage = () => {
+  
   return (
     <Layout>
 
       <Container 
-      size="fullwidth"
       width="100%"
+      size="fullwidth"
      >
     <HomeBody />
 

@@ -5,8 +5,22 @@ import Skills from "./screen/skill-screen";
 import Projects from "./screen/projects-screen";
 import Experiences from "./screen/esperiences-screen";
 import Resume from "./screen/resume-screen";
+import { useTheme } from '../src/context/Context';
 
 function App() {
+
+  const { isLightTheme, toggleTheme } = useTheme();
+
+  const lightModeClass = 'light-mode';
+  const darkModeClass = 'dark-mode';
+
+  const themeClass = isLightTheme ? lightModeClass : darkModeClass;
+
+ 
+    document.body.style.backgroundColor = {themeClass};
+    document.body.style.color = {themeClass};
+ 
+
   return (
     <Router>
       <Routes>
