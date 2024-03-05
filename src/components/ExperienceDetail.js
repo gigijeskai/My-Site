@@ -1,14 +1,14 @@
 import React from "react";
-import { Stack } from "./styled";
+import { Stack, Button } from "./styled";
 
 const ExperienceDetail = (
-    { experience }) =>
+    { experience, onClose }) =>
      {
         return (
             <Stack 
         direction="column"
         padding="2rem"
-        height={["288vh","117vh","82vh"]}
+        height={["none","none","100vh"]}
         >
             <Stack
             direction="column"
@@ -37,7 +37,12 @@ const ExperienceDetail = (
               >
                 {experience.descriptions.map((description, index) =>
                 (<p key={index}>{description}</p>))}
-                </Stack>  
+                </Stack> 
+                <hr />
+
+                <Button pt="1rem"  variant="text" onClick={onClose}>
+          Back
+        </Button> 
             </Stack>
         )
      }

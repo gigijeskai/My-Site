@@ -13,7 +13,7 @@ const ProjectDetail = ({project , onClose}) => {
         <Stack 
         direction="column"
         padding="2rem"
-        height={["265vh","108vh","100vh"]}
+        height={["none","100vh"]}
         >
              <Stack
             justify="center" 

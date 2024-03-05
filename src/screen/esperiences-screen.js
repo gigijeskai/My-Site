@@ -57,9 +57,12 @@ const experiences = [
     },
 ];
 
-const handleResetClick = () => {
+const handleResetClick = (callback) => {
     setSelectedExperience(null);
-  };
+    if (callback) {
+        callback(); // Chiamare il callback fornito
+      }
+    };
 
 const handleExperienceClick = (experienceId) => {
     setSelectedExperience(experienceId);
@@ -76,6 +79,7 @@ const handleExperienceClick = (experienceId) => {
         {selectedExperience ? (
   <ExperienceDetail
   experience={experiences.find((p) => p.title === selectedExperience)}
+  onClose={() => handleResetClick()}
   />
         ) : (
             <Stack
@@ -103,14 +107,7 @@ const handleExperienceClick = (experienceId) => {
         </Stack>
         </Stack>
         )}
-        {selectedExperience && (
-        <Stack
-            justify="center" 
-            pt="2rem"
-            >
-            <Button variant="text" onClick={handleResetClick}>Back</Button>
-            </Stack>
-             )}
+        
     </Container>
 </Layout>
     );
