@@ -1,7 +1,7 @@
 import React from "react";
-import{ Container, Stack } from "../components/styled";
+import{ Container, Stack, Button } from "../components/styled";
 
-const SkillDetail = ({ skill }) => {
+const SkillDetail = ({ skill, onClose }) => {
 
   
   return (
@@ -19,6 +19,9 @@ const SkillDetail = ({ skill }) => {
     >{skill.title}</h2>
       <p style={{paddingBottom: "2rem"}}>{skill.text}</p>
       <hr style={{width: "100%"}}/>
+      <Button variant="text" onClick={onClose}>
+          Back
+        </Button>
       </Stack>
     </Container>
   );

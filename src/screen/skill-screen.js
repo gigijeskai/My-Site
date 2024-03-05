@@ -21,9 +21,12 @@ const SkillsScreen = () => {
 const commonTest = "Ho acquisito competenze approfondite in HTML5, CSS3 e JavaScript durante i miei corsi formativi. Attualmente, perfeziono l'utilizzo di questi linguaggi nel mio ruolo di sviluppatore web presso Lottomatica, contribuendo a progetti dinamici e interattivi."
 const commonTest2 = "Ho acquisito solide competenze in TypeScript e nei principali framework di sviluppo front end attraverso la partecipazione a bootcamp formativi incentrati sull'apprendimento di React e Angular dalla versione 2 in poi. Grazie a queste esperienze, ho sviluppato una comprensione approfondita delle best practice nello sviluppo front-end, consentendomi di contribuire in modo efficace a progetti dinamici e scalabili."
 
-const handleResetClick = () => {
-    setSelectedSkill(null);
-  };
+const handleResetClick = (callback) => {
+  setSelectedSkill(null);
+  if (callback) {
+    callback(); // Chiamare il callback fornito
+  }
+};
 
 const handleSkillClick = (skillId) => {
     setSelectedSkill(skillId);
@@ -71,9 +74,10 @@ return (
         height={["none","100vh", "100vh"]}
         p="2rem"
       >
-        {selectedSkill ? (
+         {selectedSkill ? (
           <SkillDetail
             skill={Skills.find((p) => p.title === selectedSkill)}
+            onClose={() => handleResetClick()}
           />
         ) : (
           <>
@@ -100,7 +104,7 @@ return (
         {!selectedSkill && (
           <Stack 
           direction={['column', 'row']}
-          style={{ flexWrap: "wrap", gap: "3rem", rowGap: "3rem" }}
+          style={{ flexWrap: "wrap"}}
           justify="space-evenly" 
           pt="3rem"
           align="center"
@@ -115,13 +119,7 @@ return (
           </Stack>
         )}
 
-        {selectedSkill && (
-          <Stack justify="center" pt="2rem">
-            <Button variant="text" onClick={handleResetClick}>
-              Back
-            </Button>
-          </Stack>
-        )}
+      
       </Container>
     </Layout>
   );

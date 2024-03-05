@@ -23,6 +23,8 @@ return (
     justify="center"
     onClick={onClick}
     style={{ cursor: "pointer" }}
+    mt="1rem"
+    m={["none", "none", "2rem"]}
   >
     <h4>{skill.title}</h4>
     </Stack>
