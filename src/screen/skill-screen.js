@@ -71,7 +71,7 @@ return (
       className={themeClass}
         width="100%"
         size="fullwidth"
-        height={["none","150vh", "100vh"]}
+        height="100%"
         p="2rem"
       >
          {selectedSkill ? (

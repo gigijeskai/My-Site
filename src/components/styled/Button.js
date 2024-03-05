@@ -79,7 +79,7 @@ variant({
         },
     },
     mobileNav: {
-        background: "#a203ff",
+        background: "#05ecfc",
         border: "none",
         borderRadius: "50px",
         padding: "5px",
