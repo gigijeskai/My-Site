@@ -17,7 +17,7 @@ const HomeBody = () => {
       className={themeClass}
       width="100%"
       size="fullwidth"
-      height={["none","none","100vh"]}
+      height={["100vh","none","100vh"]}
       pt={["3rem" , "4rem" , "6rem"]}
       pb={["3rem" , "4rem" , "6rem"]}
       >

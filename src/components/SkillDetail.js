@@ -1,14 +1,11 @@
 import React from "react";
-import{ Container, Stack, Button } from "../components/styled";
+import{Container,  Stack, Button } from "../components/styled";
 
 const SkillDetail = ({ skill, onClose }) => {
 
   
   return (
-    <Container
-    height={["100vh","none","100vh"]}
-    size="fullwidth"
-    >
+    
         <Stack 
         direction="column"
         pt="2rem"
@@ -25,7 +22,6 @@ const SkillDetail = ({ skill, onClose }) => {
           Back
         </Button>
       </Stack>
-      </Container>
   );
 };
 

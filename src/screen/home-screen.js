@@ -11,6 +11,7 @@ const HomePage = () => {
       <Container 
       width="100%"
       size="fullwidth"
+      height="100vh"
      >
     <HomeBody />
 

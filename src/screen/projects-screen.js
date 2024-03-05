@@ -100,15 +100,7 @@ const handleProjectClick = (projectId) => {
           </Stack>
           </>
         )}
-        {/* {selectedProject && (
-            <Stack
-            justify="center" 
-            pt="2rem"
-            pb="2rem"
-            >
-            <Button variant="text" onClick={handleResetClick}>Back</Button>
-            </Stack>
-            )} */}
+        
       </Container>
     </Layout>
   );

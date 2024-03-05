@@ -72,7 +72,8 @@ return (
         width="100%"
         size="fullwidth"
         p="2rem"
-        height="100%"
+        height={["100vh","none"]}
+        style={{ minHeight: "600px"}}
       >
          {selectedSkill ? (
           <SkillDetail
