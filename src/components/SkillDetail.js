@@ -10,7 +10,6 @@ const SkillDetail = ({ skill, onClose }) => {
         direction="column"
         pt="2rem"
         align="center"
-        height="100vh"
         >
       <img style={{width: "25%", paddingBottom: "2rem"}} src={skill.imageSource} alt="Immagine del div cliccato" />
 <hr style={{width: "100%"}}/>
@@ -19,7 +18,7 @@ const SkillDetail = ({ skill, onClose }) => {
     >{skill.title}</h2>
       <p style={{paddingBottom: "2rem"}}>{skill.text}</p>
       <hr style={{width: "100%"}}/>
-      <Button variant="text" onClick={onClose}>
+      <Button pt="1rem"  variant="text" onClick={onClose}>
           Back
         </Button>
       </Stack>

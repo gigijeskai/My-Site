@@ -1,8 +1,8 @@
 import React from "react";
-import{  Stack, Box } from "../components/styled";
+import{  Stack, Box, Button } from "../components/styled";
 
 
-const ProjectDetail = ({project}) => {
+const ProjectDetail = ({project , onClose}) => {
     
 
     if(!project) return null;
@@ -51,7 +51,10 @@ const ProjectDetail = ({project}) => {
 
           <hr />
             <p style={{paddingTop: "2rem"}}>{project.fullDescription}</p>
-
+            <hr />
+            <Button pt="1rem"  variant="text" onClick={onClose}>
+          Back
+        </Button>
     </Stack>
   );
 };

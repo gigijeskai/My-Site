@@ -56,8 +56,11 @@ const projects = [
       },
 ];
 
-const handleResetClick = () => {
+const handleResetClick = (callback) => {
     setSelectedProject(null);
+    if (callback) {
+      callback(); // Chiamare il callback fornito
+    }
   };
 
 const handleProjectClick = (projectId) => {
@@ -74,6 +77,7 @@ const handleProjectClick = (projectId) => {
         {selectedProject ? (
   <ProjectDetail
     project={projects.find((p) => p.title === selectedProject)}
+    onClose={() => handleResetClick()}
   />
         ) : (
             <>
@@ -96,7 +100,7 @@ const handleProjectClick = (projectId) => {
           </Stack>
           </>
         )}
-        {selectedProject && (
+        {/* {selectedProject && (
             <Stack
             justify="center" 
             pt="2rem"
@@ -104,7 +108,7 @@ const handleProjectClick = (projectId) => {
             >
             <Button variant="text" onClick={handleResetClick}>Back</Button>
             </Stack>
-            )}
+            )} */}
       </Container>
     </Layout>
   );
