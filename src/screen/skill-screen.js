@@ -71,8 +71,8 @@ return (
       className={themeClass}
         width="100%"
         size="fullwidth"
-        height="100%"
         p="2rem"
+        height="100%"
       >
          {selectedSkill ? (
           <SkillDetail

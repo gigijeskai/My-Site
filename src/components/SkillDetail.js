@@ -5,12 +5,14 @@ const SkillDetail = ({ skill, onClose }) => {
 
   
   return (
-    <Container>
+    <Container
+    height={["100vh","none","100vh"]}
+    size="fullwidth"
+    >
         <Stack 
         direction="column"
         pt="2rem"
         align="center"
-        height={["none","none","100vh"]}
         >
       <img style={{width: "25%", paddingBottom: "2rem"}} src={skill.imageSource} alt="Immagine del div cliccato" />
 <hr style={{width: "100%"}}/>
@@ -19,11 +21,11 @@ const SkillDetail = ({ skill, onClose }) => {
     >{skill.title}</h2>
       <p style={{paddingBottom: "2rem"}}>{skill.text}</p>
       <hr style={{width: "100%"}}/>
-      <Button pt="1rem"  variant="text" onClick={onClose}>
+      <Button pt="2rem"  variant="text" onClick={onClose}>
           Back
         </Button>
       </Stack>
-    </Container>
+      </Container>
   );
 };
 
